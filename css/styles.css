@@ -720,59 +720,69 @@ body {
 
 @media (max-width: 900px) {
 
+    /* 1. ARREGLAR LA BARRA DE NAVEGACIÓN */
     .bar {
-        position: fixed;
-        height: auto;
+        position: fixed; /* Se mantiene fija */
+        height: auto;    /* Altura automática para que quepan dos líneas si hace falta */
         padding: 10px 0;
-        gap: 15px;
-        flex-wrap: wrap;
+        gap: 15px;       /* Reducimos el hueco de 100px a 15px */
+        flex-wrap: wrap; /* Permite que los enlaces bajen a otra línea si no caben */
     }
 
     .bar a {
-        font-size: 14px;
+        font-size: 14px; /* Letra más pequeña para que quepan */
     }
 
+    /* 2. ARREGLAR TÍTULOS GIGANTES */
     .title {
-        margin-top: 150px;
-        font-size: 40px;
-        padding: 0 20px;
+        margin-top: 150px; /* Menos margen arriba */
+        font-size: 40px;   /* Reducimos de 75px a 40px */
+        padding: 0 20px;   /* Un poco de margen a los lados para que no toque el borde */
     }
 
     .aboutme-text, .section-title {
-        font-size: 35px;
+        font-size: 35px;   /* Títulos de sección más pequeños */
     }
 
+    /* 3. ARREGLAR ANCHOS Y COLUMNAS */
     
+    /* Que las descripciones ocupen casi toda la pantalla en móvil */
     .aboutme-desc {
         width: 90%; 
         font-size: 16px;
     }
 
-    .careabout, .whatIuse, .contact-wrapper 
+    /* Que los elementos que están uno al lado del otro, se pongan uno DEBAJO del otro */
+    .careabout, .whatIuse, .contact-wrapper {
+        flex-direction: column; /* Columna vertical */
         gap: 40px;
         align-items: center;
     }
 
+    /* Ajustar las tarjetas para que no se salgan */
     .careabout-item, .whatIuse-item, .form-container {
-        width: 90%;
+        width: 90%;      /* Ocupan el 90% del ancho del móvil */
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0 auto;  /* Centradas */
     }
 
+    /* 4. AJUSTES VARIOS */
     .standard-section {
-        padding: 60px 15px;
+        padding: 60px 15px; /* Menos relleno a los lados */
     }
     
+    /* Arreglar la tarjeta de contacto */
     .contact-card-direct {
-        flex-direction: column;
+        flex-direction: column; /* Icono arriba, texto abajo */
         text-align: center;
         width: 90%;
     }
     
     .arrow-box {
-        display: none;
+        display: none; /* Ocultamos la flecha en móvil porque sobra */
     }
 
+    /* Ajustar iconos */
     .itch svg, .email svg {
         width: 40px;
         height: 40px;
